@@ -1,0 +1,351 @@
+/* style.css */
+/* Reset e configurações globais */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e border dentro das dimensões definidas para os elementos */
+    transition: background-color 0.3s ease, color 0.2s ease; /* Define transições suaves para mudanças de cor de fundo e cor do texto */
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif; /* Define a fonte principal do site */
+    background-color: #f0f4f8; /* Define a cor de fundo clara do body */
+    color: #333; /* Define a cor do texto padrão */
+    line-height: 1.6; /* Define a altura da linha para melhorar a legibilidade */
+    padding: 20px; /* Adiciona espaçamento interno ao redor do conteúdo do body */
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o body horizontalmente */
+}
+
+/* Header */
+header {
+    background: #032e5a; /* Define a cor de fundo do cabeçalho */
+    color: #fff; /* Define a cor do texto do cabeçalho */
+    padding: 1.5rem; /* Adiciona espaçamento interno no cabeçalho */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil para dar profundidade */
+    border-radius: 10px; /* Arredonda os cantos do cabeçalho */
+    margin-bottom: 2rem; /* Adiciona uma margem inferior para separar o cabeçalho do restante do conteúdo */
+}
+
+/* Navegação */
+nav {
+    background: #f8f9fa; /* Define a cor de fundo da área de navegação */
+    padding: 1rem; /* Adiciona espaçamento interno ao contêiner de navegação */
+    border-radius: 10px; /* Arredonda os cantos da navegação */
+    margin: 20px 0; /* Adiciona margem vertical acima e abaixo da navegação */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Adiciona sombra para destacar a navegação */
+}
+
+nav ul {
+    display: flex; /* Utiliza Flexbox para alinhar os itens da lista horizontalmente */
+    justify-content: center; /* Centraliza os itens dentro do contêiner */
+    gap: 2rem; /* Define um espaço de 2rem entre os itens */
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0; /* Remove o padding padrão dos itens de lista */
+}
+
+nav a {
+    color: #00082c; /* Define a cor do texto dos links de navegação */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: 500; /* Define o peso da fonte dos links */
+    padding: 0.5rem 1rem; /* Adiciona espaçamento interno nos links */
+    border-radius: 5px; /* Arredonda os cantos dos links */
+    transition: all 0.3s ease; /* Aplica uma transição suave para qualquer mudança de estilo */
+}
+
+nav a:hover,
+nav a.active {
+    color: #2196F3; /* Altera a cor do texto para azul quando o link está em hover ou ativo */
+    background: #e9ecef; /* Altera o fundo para um tom claro em hover ou quando ativo */
+}
+
+nav a.active {
+    transform: translateY(-2px); /* Move o link ativo 2px para cima */
+    box-shadow: 0 3px 8px rgba(33, 150, 243, 0.3); /* Adiciona sombra ao link ativo para destacá-lo */
+}
+
+/* Main e Seções */
+main {
+    margin: 2rem auto; /* Define margens verticais e centraliza horizontalmente o main */
+    padding: 0 1rem; /* Adiciona espaçamento horizontal dentro do main */
+}
+
+section {
+    margin-bottom: 3rem; /* Separa cada seção com uma margem inferior */
+    background: white; /* Define o fundo branco para as seções */
+    border-radius: 10px; /* Arredonda os cantos das seções */
+    padding: 2rem; /* Adiciona espaçamento interno nas seções */
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1); /* Adiciona uma sombra para dar profundidade às seções */
+}
+
+h1, h2 {
+    text-align: center; /* Centraliza os títulos */
+    margin-bottom: 1.5rem; /* Adiciona uma margem inferior aos títulos para espaçamento */
+}
+
+h1 {
+    font-size: 2.5rem; /* Define o tamanho da fonte de h1 */
+    color: #fff; /* Define a cor do texto de h1 */
+}
+
+h2 {
+    color: #2c3e50; /* Define a cor do texto de h2 */
+    font-size: 2rem; /* Define o tamanho da fonte de h2 */
+    border-bottom: 3px solid #3498db; /* Adiciona uma borda inferior para destacar o h2 */
+    padding-bottom: 0.5rem; /* Adiciona espaçamento interno abaixo do h2 para separar da borda */
+}
+
+/* Listas e Grids */
+ul {
+    display: grid; /* Utiliza Grid Layout para as listas */
+    gap: 2rem; /* Define um espaço de 2rem entre os itens do grid */
+    list-style: none; /* Remove os marcadores padrão da lista */
+}
+
+#internos ul {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas responsivas com tamanho mínimo de 300px */
+}
+
+#externos ul {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria colunas responsivas com tamanho mínimo de 250px */
+}
+
+#so ul {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Cria colunas responsivas com tamanho mínimo de 200px */
+}
+
+li {
+    background: #f8f9fa; /* Define a cor de fundo dos itens de lista */
+    padding: 1.5rem; /* Adiciona espaçamento interno aos itens de lista */
+    border-radius: 8px; /* Arredonda os cantos dos itens */
+    transition: transform 0.3s ease; /* Aplica uma transição suave para transformações, como hover */
+}
+
+li:hover {
+    transform: translateY(-5px); /* Move o item para cima 5px quando o mouse passa por cima */
+}
+
+strong {
+    display: block; /* Faz o elemento ocupar toda a largura disponível, comportando-se como um bloco */
+    color: #3498db; /* Define a cor do texto para o elemento strong */
+    font-size: 1.2rem; /* Define o tamanho da fonte de strong */
+    margin-bottom: 1rem; /* Adiciona uma margem inferior para separar do conteúdo subsequente */
+}
+
+/* Imagens */
+img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+    max-width: 400px; /* Define o tamanho máximo da imagem para 400px */
+    height: auto; /* Ajusta a altura mantendo a proporção original da imagem */
+    display: block; /* Exibe a imagem como um bloco */
+    margin: 1rem auto; /* Centraliza a imagem horizontalmente e adiciona margem vertical */
+    border-radius: 6px; /* Arredonda os cantos da imagem */
+    cursor: pointer; /* Altera o cursor para pointer, indicando que a imagem é interativa */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Aplica uma sombra sutil à imagem */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Centraliza o conteúdo do rodapé */
+    padding: 1.5rem; /* Adiciona espaçamento interno ao rodapé */
+    background: #032e5a; /* Define a cor de fundo do rodapé */
+    color: white; /* Define a cor do texto do rodapé */
+    margin-top: 3rem; /* Adiciona uma margem superior para separar o rodapé dos demais conteúdos */
+    border-radius: 10px; /* Arredonda os cantos do rodapé */
+}
+
+/* Componentes JavaScript */
+.progress-bar {
+    position: fixed; /* Posiciona a barra de progresso de forma fixa na viewport */
+    top: 0; /* Coloca a barra no topo da página */
+    left: 0; /* Alinha a barra à esquerda da página */
+    height: 4px; /* Define a altura da barra de progresso */
+    background: linear-gradient(90deg, #2196F3, #4CAF50); /* Aplica um gradiente linear como fundo */
+    z-index: 1000; /* Garante que a barra fique acima de outros elementos na página */
+    box-shadow: 0 2px 5px rgba(33, 150, 243, 0.3); /* Adiciona sombra para dar ênfase à barra */
+}
+
+.modal {
+    position: fixed; /* Posiciona o modal de forma fixa na viewport */
+    top: 0; /* Alinha o modal ao topo da página */
+    left: 0; /* Alinha o modal à esquerda da página */
+    width: 100%; /* Define a largura do modal para 100% da viewport */
+    height: 100%; /* Define a altura do modal para 100% da viewport */
+    background: rgba(0,0,0,0.95); /* Define um fundo escuro e semitransparente para o modal */
+    display: flex; /* Usa Flexbox para alinhar o conteúdo do modal */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    z-index: 2000; /* Garante que o modal fique acima de outros elementos */
+    cursor: zoom-out; /* Altera o cursor para indicar a ação de reduzir o zoom (fechar o modal) */
+    opacity: 0; /* Inicialmente deixa o modal invisível */
+    animation: modalFadeIn 0.3s forwards; /* Anima a aparição do modal alterando a opacidade */
+}
+
+.modal-content {
+    max-width: 90%; /* Limita a largura máxima do conteúdo do modal a 90% da viewport */
+    max-height: 90vh; /* Limita a altura máxima do conteúdo do modal a 90% da altura da viewport */
+    background: white; /* Define o fundo do conteúdo do modal para branco */
+    border-radius: 12px; /* Arredonda os cantos do conteúdo do modal */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites do contêiner */
+    transform: scale(0.9); /* Inicialmente reduz o tamanho do conteúdo para 90% */
+    animation: modalContentScale 0.3s forwards; /* Anima o dimensionamento do conteúdo para o tamanho original */
+}
+
+.modal-image {
+    width: 100%; /* Faz a imagem do modal ocupar 100% da largura disponível */
+    height: auto; /* Mantém a proporção original da imagem */
+    display: block; /* Exibe a imagem como um bloco */
+    border-bottom: 2px solid #eee; /* Adiciona uma borda inferior para separar a imagem do restante */
+}
+
+.modal-caption {
+    padding: 1rem; /* Adiciona espaçamento interno para a legenda */
+    text-align: center; /* Centraliza o texto da legenda */
+    font-size: 0.9em; /* Define o tamanho da fonte da legenda */
+    color: #666; /* Define a cor do texto da legenda */
+}
+
+.theme-toggle {
+    position: fixed; /* Posiciona o botão de troca de tema de forma fixa na viewport */
+    bottom: 20px; /* Afastamento de 20px do fundo da página */
+    right: 20px; /* Afastamento de 20px da direita da página */
+    padding: 12px 24px; /* Define o espaçamento interno do botão */
+    background: #2196F3; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove qualquer borda padrão */
+    border-radius: 30px; /* Arredonda o botão para dar um efeito oval */
+    cursor: pointer; /* Altera o cursor para indicar que o elemento é clicável */
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4); /* Adiciona uma sombra para dar destaque ao botão */
+    z-index: 1000; /* Posiciona o botão acima de outros elementos na página */
+    transition: all 0.3s ease; /* Aplica transição suave a todas as alterações de estilo */
+}
+
+.scroll-top {
+    position: fixed; /* Posiciona o botão de voltar ao topo de forma fixa na viewport */
+    bottom: 80px; /* Afastamento de 80px do fundo da página */
+    right: 20px; /* Afastamento de 20px da direita da página */
+    width: 50px; /* Define a largura do botão */
+    height: 50px; /* Define a altura do botão */
+    background: #2196F3; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto ou ícone do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 50%; /* Torna o botão perfeitamente redondo */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    opacity: 0; /* Inicialmente define o botão como invisível */
+    visibility: hidden; /* Garante que o botão não seja exibido inicialmente */
+    transform: translateY(20px); /* Posiciona o botão 20px abaixo do seu local final inicialmente */
+    transition: all 0.3s ease; /* Adiciona transição suave para mudanças de visibilidade e posição */
+    z-index: 1000; /* Posiciona o botão acima de outros elementos */
+    display: grid; /* Utiliza grid layout para centralizar o conteúdo do botão */
+    place-items: center; /* Centraliza o conteúdo dentro do botão horizontal e verticalmente */
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4); /* Adiciona sombra para destacar o botão */
+}
+
+.scroll-top.show {
+    opacity: 1; /* Torna o botão visível */
+    visibility: visible; /* Altera a visibilidade para que o botão seja exibido */
+    transform: translateY(0); /* Remove a translação para posicionar o botão corretamente */
+}
+
+/* Tema Escuro */
+.dark-theme {
+    background: #1a1a1a; /* Define um fundo escuro para o tema */
+    color: #e0e0e0; /* Define uma cor de texto mais clara para melhor contraste no tema escuro */
+}
+
+.dark-theme header,
+.dark-theme footer {
+    background: #2d2d2d; /* Altera o fundo do cabeçalho e rodapé para um tom escuro no tema escuro */
+}
+
+.dark-theme nav {
+    background: #3d3d3d; /* Define um fundo escuro para a navegação no tema escuro */
+}
+
+.dark-theme section {
+    background: #252525; /* Altera o fundo das seções para um tom bem escuro no tema */
+}
+
+.dark-theme h2 {
+    color: #e0e0e0; /* Define a cor do texto dos h2 no tema escuro */
+    border-color: #2196F3; /* Altera a cor da borda inferior de h2 para combinar com o tema */
+}
+
+.dark-theme nav a {
+    color: #ccc; /* Define uma cor de texto mais clara para os links de navegação no tema escuro */
+}
+
+.dark-theme nav a:hover {
+    background: #4d4d4d; /* Define um fundo mais escuro para links ao passar o mouse, no tema escuro */
+}
+
+.dark-theme img {
+    filter: brightness(0.9) contrast(1.05); /* Ajusta o brilho e contraste das imagens para se adequar ao fundo escuro */
+}
+
+/* Animações */
+@keyframes modalFadeIn {
+    to { opacity: 1; } /* Anima a opacidade do modal de 0 para 1, fazendo-o aparecer gradualmente */
+}
+
+@keyframes modalContentScale {
+    to { transform: scale(1); } /* Anima a escala do conteúdo do modal de 0.9 para 1, fazendo-o crescer suavemente */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduz o padding do body em telas menores */
+    }
+    
+    h1 {
+        font-size: 2rem; /* Reduz o tamanho da fonte do h1 para telas menores */
+    }
+    
+    h2 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do h2 em dispositivos menores */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Altera a orientação dos itens de navegação para coluna */
+        gap: 1rem; /* Diminui o espaço entre os itens de navegação para telas menores */
+        text-align: center; /* Centraliza o texto dos itens de navegação */
+    }
+    
+    #internos ul,
+    #externos ul,
+    #so ul {
+        grid-template-columns: 1fr; /* Altera o grid para exibir uma única coluna em dispositivos menores */
+    }
+    
+    .theme-toggle {
+        bottom: 10px; /* Ajusta a posição inferior do botão de troca de tema para telas menores */
+        right: 10px; /* Ajusta a posição à direita do botão de troca de tema para telas menores */
+        padding: 10px 20px; /* Reduz o espaçamento interno do botão de troca de tema */
+        font-size: 0.9em; /* Ajusta o tamanho da fonte do botão para se adequar à tela */
+    }
+    
+    .scroll-top {
+        bottom: 70px; /* Ajusta a posição inferior do botão de voltar ao topo para telas menores */
+        right: 10px; /* Ajusta a posição à direita do botão para telas menores */
+        width: 40px; /* Reduz a largura do botão */
+        height: 40px; /* Reduz a altura do botão */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 95%; /* Ajusta a largura máxima do conteúdo do modal para dispositivos muito pequenos */
+    }
+    
+    .theme-toggle {
+        width: 50px; /* Reduz a largura do botão de troca de tema em telas muito pequenas */
+        height: 50px; /* Reduz a altura do botão de troca de tema */
+        padding: 0; /* Remove o padding interno para se adequar ao espaço disponível */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente no botão */
+    }
+    
+    .theme-toggle span {
+        display: none; /* Oculta o elemento span dentro do botão de troca de tema em telas muito pequenas */
+    } 
+}
